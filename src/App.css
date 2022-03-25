@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #cff7cf;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Animals styling */
+/* ======================================= */
+
+.zoo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+    gap: 3rem;  
+    margin: 1rem; 
+    text-align: center; 
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.animal-container {
+    background-color: #98e098;  
+    border-radius: 25px;
+    border: 5px double green;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.animal-name a {
+    text-decoration: none;
+    color: #ff5e00;
 }
 
-.App-link {
-  color: #61dafb;
+.animal-name-arrow {
+    display: inline-block;
+    background-color: #ff5e00;
+    width: 2rem;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: #98e098;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.animal-latin-name,
+.animalinfo-latin-name {
+    font-weight: bold;
+}
+
+.animal-img-container {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 90%;    
+    aspect-ratio:4/3;    
+    overflow: hidden;   
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.452); 
+    border: 1px solid rgba(2, 51, 0, 0.425);
+    border-radius: 50px;
+}
+
+.animal-img {
+    display: block;    
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.animal-short-text {
+    padding: 10px;
+    font-size: 1.07rem;
+}
+
+
+/* AnimalsInfo styling */
+/* ======================================= */
+
+.animalinfo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animalinfo-name {
+    font-size: 3rem;
+}
+
+.animalinfo-img {
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.452); 
+    border: 1px solid rgba(1, 34, 0, 0.322);
+}
+
+.animal-long-text {
+    width: 50vw;
+    font-size: 1.15rem;
+}
+
+.animalinfo-hungry {
+    background-color: #ff000027;
+}
+
+.animalinfo-full {
+    background-color: #00ff1527;
+}
+
+.animalinfo-fed-date {
+    font-weight: bold;
+}
+
+.feed-button {
+    width: 70px;
+    height: 2rem;
+    font-size: 1.15rem;
 }
